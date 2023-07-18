@@ -4,9 +4,9 @@ description: Backup postgres database on kubernetes persistent volume claim
 
 type: application
 
-version: 0.1.7
+version: 0.1.8
 
-appVersion: v0.1.7
+appVersion: v0.1.8
 
 
 
