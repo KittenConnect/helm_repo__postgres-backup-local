@@ -8,6 +8,7 @@ data:
     POSTGRES_HOST: {{ .Values.config.postgres_host }}
     POSTGRES_PORT:  {{ .Values.config.postgres_port | quote}}
     POSTGRES_DB: {{ .Values.config.postgres_db }}
+    POSTGRES_USER: {{ .Values.auth.postgres_user }}
     POSTGRES_EXTRA_OPTS: {{ .Values.config.postgres_extra_opts |quote }}
     SCHEDULE: {{ .Values.config.schedule | quote }}
     BACKUP_KEEP_DAYS: {{ .Values.config.backup_keep_days | quote}}

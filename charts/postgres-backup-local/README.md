@@ -23,7 +23,7 @@ values:
 postgres-backup-local:
   auth:
     # must match release name
-    existingPasswordSecret: postgres-backup-local-auth
+    existingSecret: postgres-backup-local-auth
   config:
     postgres_host: pg-auth-db-1414-1212-468f-1111-ae0.aivencloud.com
     postgres_port: 21699

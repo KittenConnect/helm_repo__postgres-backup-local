@@ -52,3 +52,24 @@ app.kubernetes.io/name: {{ include "postgres-backup-local.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
 
+{{/*
+Name of the Secret that contains the PostgreSQL password
+*/}}
+{{- define "postgres-backup-local.secret" -}}
+  {{- if .Values.auth.existingSecret }}
+    {{- .Values.auth.existingSecret }}
+  {{- else }}
+    {{- include "postgres-backup-local.fullname" . }}
+  {{- end }}
+{{- end }}
+
+{{/*
+Name of the key in Secret that contains the PostgreSQL password
+*/}}
+{{- define "postgres-backup-local.secretPasswordKey" -}}
+  {{- if .Values.auth.existingSecret -}}
+    {{- .Values.auth.existingSecretPasswordKey -}}
+  {{- else -}}
+    POSTGRES_PASSWORD
+  {{- end -}}
+{{- end }}

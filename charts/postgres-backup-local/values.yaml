@@ -22,10 +22,12 @@ image:
   pullSecrets: []
 
 auth:
-  #existingPasswordSecret: ""
-  postgres_user: changeMe
+  # existingSecret: ""
+  # existingSecretUserKey: postgresql-username
+  # existingSecretPasswordKey: postgresql-password
   postgres_password: changeMe
 config:
+  postgres_user: ""
   postgres_host: ""
   postgres_port: 5432
   postgres_db: auth
