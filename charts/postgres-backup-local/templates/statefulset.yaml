@@ -30,7 +30,7 @@ spec:
               mountPath: {{ .Values.persistence.mountPath  }}
 
           {{- if .Values.persistence.subPath }}
-              subPath: .Values.persistence.subPath
+              subPath: {{ .Values.persistence.subPath }}
           {{- end }}
           env:
           - name: POSTGRES_PASSWORD
