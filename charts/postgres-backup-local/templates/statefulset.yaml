@@ -33,11 +33,11 @@ spec:
               subPath: .Values.persistence.subPath
           {{- end }}
           env:
-            - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: {{ include "postgres-backup-local.secret" . | quote  }}
-                  name: {{ include "postgres-backup-local.secretPasswordKey" . | quote  }}
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "postgres-backup-local.secret" . | quote  }}
+                key: {{ include "postgres-backup-local.secretPasswordKey" . | quote  }}
           envFrom:
             - configMapRef:
                 name: {{ include "postgres-backup-local.fullname" . }}

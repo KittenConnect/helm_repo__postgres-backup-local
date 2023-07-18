@@ -70,6 +70,6 @@ Name of the key in Secret that contains the PostgreSQL password
   {{- if .Values.auth.existingSecret -}}
     {{- .Values.auth.existingSecretPasswordKey -}}
   {{- else -}}
-    POSTGRES_PASSWORD
+    postgresql-password
   {{- end -}}
 {{- end }}
