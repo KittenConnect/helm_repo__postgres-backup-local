@@ -208,6 +208,16 @@ entries:
     version: 0.1.1
   postgres-backup-local:
   - apiVersion: v2
+    appVersion: v0.1.6
+    created: "2023-07-18T17:58:49.452301398Z"
+    description: Backup postgres database on kubernetes persistent volume claim
+    digest: 1f5486d323a10433ba2bed817f6357654c84c8b2f57243f51f72a636b466d276
+    name: postgres-backup-local
+    type: application
+    urls:
+    - https://github.com/KittenConnect/helm_repo__postgres-backup-local/releases/download/postgres-backup-local-0.1.6/postgres-backup-local-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
     appVersion: v0.1.5
     created: "2022-03-28T19:38:51.589427739Z"
     description: Backup postgres database on kubernetes persistent volume claim
@@ -267,4 +277,4 @@ entries:
     urls:
     - https://github.com/ducksify/duck-helm/releases/download/postgres-backup-local-0.1.0/postgres-backup-local-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-25T08:46:32.18674421Z"
+generated: "2023-07-18T17:58:49.452343798Z"
